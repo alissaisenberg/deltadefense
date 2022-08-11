@@ -1,0 +1,1 @@
+It's been a really long time since I've developed an entire page from scratch so I hope I did ok. This was the first time I've used Adobe XD and the first time I've created a timeline. I could not for the life of me figure out the verticle and horizontal lines, but I tried my best and got as far as I could without additional time or more research. Let me know your thoughts. 
