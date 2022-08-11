@@ -1,0 +1,484 @@
+/* Delta Defense - Online Community styles */
+
+/*** start global styles ***/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*clears padding and margin from body and all p elements*/
+body, p {
+    padding: 0;
+    margin: 0;
+}
+
+/*gives all divs box styles*/
+* {
+    box-sizing: border-box;
+  }
+
+.main-container {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #121212;
+}
+
+/*styles phone number button*/
+button {
+    font-family: 'Roboto', sans-serif;
+    color:#121212;
+}
+
+/*overrides Chrome browser defaults for h1*/
+h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  /*overrides Chrome browser defaults for h3*/
+  h3 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+/*** end global styles ***/
+
+/*** start header styles ***/
+
+/*makes topbars sticky*/
+.fixed-topbars {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/*** start topbar1 w/ logos ***/
+
+/*sets height, padding, background for topbar1*/
+.topbar1 {
+    min-height: 5em;
+    padding: .8% 9% .6% 9%;
+    background-color:#121212;
+}
+
+/*makes right logo right aligned*/
+.topbar1 .right-logo {
+    float: right;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1em;
+}
+
+/*makes left logo left aligned*/
+.topbar1 .left-logo {
+    float: left;
+}
+
+/*styles logo 'presented by' text*/
+.topbar1-logo-text {
+    color: #cbced1;
+    font-size: 10px;
+    padding-right: 7px;
+    line-height: 13px;
+    font-style: italic;
+}
+
+/*** end topbar1 w/ logos ***/
+
+/*** start topbar2 w/ phone number ***/
+
+/*sets styles for topbar2*/
+.topbar2 {
+    background-color: white;
+    text-align: right;
+    padding: .3% 9%;
+    font-size: 16px;
+}
+
+/*puts topbar2 text in one line*/
+.topbar2 p,
+.topbar2 button {
+    display: inline-block;
+}
+
+/*styles topbar2 text*/
+.topbar2Text {
+    color: #787878;
+    font-style: italic;
+}
+
+/*removes button styles on topbar2 phone number*/
+.topbar2 button {
+    font-weight: 900;
+    background-color: white;
+    border: 0px;
+    font-size: 16px;
+    padding: 0 0 0 12px;
+}
+
+/*** end topbar2 w/ phone number ***/
+
+
+/*** start hero section ***/
+
+/* creates hero section container */
+.hero-section {
+    position: relative;
+    top: 104px;
+    color: white;
+    padding: 6% 16% 6% 16%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    background-color: #121212;
+    gap: 10%;
+}
+
+/*creats 2 columns*/
+.left-hero-column,
+.right-hero-column {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+/*number with circle background placement*/
+.number-icon-elements {
+    position: relative;
+    width: 100%;
+    margin-bottom: 17%;
+}
+
+/*number icon and background styling*/
+.hero-number-icon {
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    border-radius: 50%;
+    background-color: #0074E0;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*creates line right center of number icon*/
+.hero-section .hero-number-icon::after {
+    content: '';
+    position: absolute;
+    width: -webkit-fill-available;
+    background-color: #444546;
+    border: none;
+    height: 1px;
+    top: 50%;
+    margin-left: 40px;
+}
+
+/*makes left hero image responsive*/
+.hero-section .left-image {
+    width: 100%;
+}
+
+/*makes right USCCA Community and Connection image responsive*/
+.hero-section .right-image {
+    width: 90%;
+}
+
+/*** end hero section ***/
+
+
+/*** start main-content ***/
+
+/* moves main-content container down */
+.main-content {
+    padding: 0 9% 0% 9%;
+    top: 70px;
+    position: relative;
+}
+
+/*** start timeline styles ***/
+
+/* creates timeline and sets placement*/
+ul.timeline {
+    position: relative;
+    margin: 0 auto 5% -8%;
+    padding: 0;
+    display: inline-block;
+  }
+
+/*** start timeline text box container styles ***/
+  
+  /* circles on the timeline - right side*/
+  li.text-box-container.right::before {
+    position: absolute;
+    left: 60px;
+    top: 40%;
+    content: " ";
+    border-radius: 500%;
+    background: #b88e33;
+    height: 12px;
+    width: 12px;
+  }
+
+/* circles on the timeline - left side */
+li.text-box-container.left::before {
+    position: absolute;
+    right: 60px;
+    top: 40%;
+    content: " ";
+    border-radius: 500%;
+    background: #b88e33;
+    height: 12px;
+    width: 12px;
+}
+
+/*** end timeline circle styles ***/
+
+/*** start text box container styles ***/
+
+/* places the text box containers to the right */
+    .right {
+    left: 50%;
+}
+
+/*timeline text box container shared styles*/
+li.text-box-container {
+    position: relative;
+    list-style: none;
+    min-height: 185px;
+}
+
+/*moves all timeline content containers up*/
+.text-box-container { 
+    margin-top: -8%;
+}
+
+/*fixes top timeline content container top placement*/
+.text-box-container.top { 
+    margin-top: 0%;
+}
+
+/*moves bottom timeline content box down*/
+.text-box-container.bottom { 
+    margin-top: 7%;
+}
+
+/*left side timeline text box containers*/
+.text-box-container.left {
+    width: 50%;
+}
+
+/*right side timeline text box containers*/
+.text-box-container.right {
+    width: 50%;
+}
+
+/*sets border on right side of left text box containers*/
+li.text-box-container.left::after {
+    content: " ";
+    position: absolute;
+    border-left: 1px dotted #b88e33;
+    top: 40%;
+    right: -7px;
+    height: 57%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*sets border on left side of text box containers*/
+li.text-box-container.right::after {
+    content: " ";
+    position: absolute;
+    border-left: 1px dotted #b88e33;
+    top: 42%;
+    left: 6px;
+    height: 57%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*** end timeline text box container styles ***/
+
+/*** start timeline content box styles ***/
+
+/* timeline content box */
+.text-box-container .content {
+    position: relative;
+    background-color: #F7F7F8;
+    padding: 30px 25px;
+    border-radius: 5px;
+}
+
+/*fixes bottom content box spacing*/
+li.text-box-container.bottom .content {
+    margin-top: -30%;
+    margin-bottom: 0;
+}
+
+/* adds space between right content boxes and the verticle timeline ruler*/
+.text-box-container.right .content {
+    margin-left: 88px;
+}
+
+/* adds space between left content boxes and the verticle timeline ruler*/
+.text-box-container.left .content {
+    margin-right: 88px;
+}
+
+/*timeline content box p text styles*/
+p.boxText {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/*timeline content box h3 text styles*/
+.heading {
+    font-weight: bold;
+    color: #121212;
+    font-size: 1em;
+    line-height: 35px;
+    text-align: left;
+    margin: 0px;
+}
+
+/*** end timeline content container styles ***/
+
+/*** end timeline styles ***/
+
+/*** end desktop styles ***/
+
+/*************************************************************************************/
+/*************************************************************************************/
+
+/*** MOBILE STYLES ***/
+
+@media (max-width: 700px) {
+
+    /*** start mobile header section styles ***/
+
+    /*hides sticky nav on mobile*/
+    .fixed-topbars {
+        display: none;
+    }
+
+    /*reduces container padding on mobile*/
+    .hero-section {
+        padding-right: 8%;
+        padding-left: 8%;
+        padding-bottom: 14%;
+    }
+
+    /* moves hero section back to top */
+    .hero-section {
+        top: 0px;
+    }
+
+    /*** start mobile timeline styles ***/
+
+    /*moves timeline up for mobile*/
+    ul.timeline {
+        margin-top: -25%;
+    }
+
+    /* moves the timelime over to the left */
+    ul.timeline::after {
+        left: 31px;
+    }
+
+    /*** start mobile timeline circle styles ***/
+
+    /*puts all right container circle dots on the left for mobile*/
+    li.text-box-container.right::after {
+        content: " ";
+        position: absolute;
+        border-left: 1px dotted #b88e33;
+        top: 42%;
+        right:6px;
+        height: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    /*puts all left container circle dots on the left for mobile*/
+    li.text-box-container.left::after {
+        content: " ";
+        position: absolute;
+        border-left: 1px dotted #b88e33;
+        top: 42%;
+        left: 6px;
+        height: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    /* circles on the timeline - left side */
+    li.text-box-container.left::before,
+    li.text-box-container.right::before {
+        left: 85px;
+        top: 40%;
+    }
+
+    /*** start mobile text box container styles ***/
+
+    /*changes border for bottom text box container*/
+    li.text-box-container.bottom::after {
+        top: 0%;
+        height: 40%;
+    }
+    
+    /* makes containers responsive and sets the container height/spacing in between */
+    li.text-box-container {
+        width: 100% !important;
+        margin-bottom: 40px;
+    }
+
+     /* makes all right containers behave like the left ones */
+       .right {
+        left: 0%;
+    }
+
+    /*** start mobile content container styles ***/
+
+    /* removes space between right content boxes and the verticle timeline ruler*/
+    .text-box-container.left .content {
+        margin-right: 0px;
+        width: 72%;
+    }
+
+    .text-box-container.right .content {
+        margin-left: 112px;
+        width: 72% !important;
+    }
+
+    /*moves timeline container content boxes over to left; aligned*/
+    .text-box-container .content {
+        margin-bottom: 30px;
+        margin-left: 112px;
+    }
+
+    /*fies spacing - moves bottom timeline content box down*/
+    .text-box-container.bottom { 
+        margin-top: 32%;
+    }
+
+    /*fixes spacing on 2 line heading when screen shrinks*/
+    .content .heading {
+        line-height: 22px;
+    }
+
+    /*fixes content p spacing under heading*/
+    .content p {
+        margin-top: 7px;
+    }
+
+    /*** end mobile timeline styles ***/
+
+}
+
+/*** END MOBILE STYLES ***/
